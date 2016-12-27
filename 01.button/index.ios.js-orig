@@ -1,0 +1,19 @@
+// lession from stephengrider
+
+// import a library to create Component
+import React from 'react';
+import { AppRegistry, View } from 'react-native';
+
+import Header from './src/components/header.js';
+import AlbumList from './src/components/AlbumList.js';
+
+// create a Component
+const App = () => (
+    <View>
+        <Header headerText={'Albums'} />
+        <AlbumList />
+    </View>
+  );
+
+// render it to the screen
+AppRegistry.registerComponent('Pointlook', () => App);

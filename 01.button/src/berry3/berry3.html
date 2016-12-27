@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Match3</title>
+    <style>
+       * {
+           margin: 0;
+           padding: 0;
+       }
+       html,
+       body {
+           width: 100vw;
+           height: 100vh;
+       }
+       canvas {
+           height: 100vh;
+           width: 100vw;
+           display: block;
+       }
+   </style>
+  </head>
+  <body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="900px" width="600px"></canvas>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    backgroundColor: "#222C36",
+    splashStyle: "Light",
+    dataUrl: "berrymatch3.data",
+    codeUrl: "berrymatch3.js",
+    asmUrl: "berrymatch3.asm.js",
+    memUrl: "berrymatch3.mem",
+  };
+</script>
+<script src="UnityLoader.js"></script>
+
+  </body>
+</html>

@@ -1,2 +1,2 @@
-# rn-redux
-react redux udemy tutorial
+# redux-class-01
+learning about redux
