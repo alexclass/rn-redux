@@ -3,14 +3,14 @@ import { View } from 'react-native';
 
 const Card = (props) => {
   return (
-    <View style={styles.constainerStyle}>
+    <View style={styles.containerStyle}>
       {props.children}
     </View>
   );
 };
 
 const styles = {
-  constainerStyle: {
+  containerStyle: {
     borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',

@@ -2,16 +2,16 @@ import React from 'react';
 import { View } from 'react-native';
 
 const CardSection = (props) => {
-  const { constainerStyle } = styles;
+  const { containerStyle } = styles;
   return (
-    <View style={constainerStyle}>
+    <View style={containerStyle}>
       {props.children}
     </View>
   );
 };
 
 const styles = {
-  constainerStyle: {
+  containerStyle: {
     borderBottomWidth: 1,
     padding: 5,
     backgroundColor: '#fff',

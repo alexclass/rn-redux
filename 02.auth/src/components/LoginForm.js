@@ -3,18 +3,19 @@ import React, { Component } from 'react';
 import { Button, Card, CardSection, Input } from './common';
 
 class LoginForm extends Component {
-    state = { text: '' };
+    state = { email: '' };
     render() {
         console.log('1.LoginForm state: ', this.state)
         return (
             <Card>
-                <CardSection />
+                <CardSection>
                     <Input
                         label="Email"
+                        placeholder="you@pointlook.com"
                         value={this.state.text}
-                        onChangeText={ text => this.setState({ text })}
+                        onChangeText={ email => this.setState({ email }) }
                     />
-                <CardSection />
+                </CardSection>
 
                 <CardSection>
                     <Button>
