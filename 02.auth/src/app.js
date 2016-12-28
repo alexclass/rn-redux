@@ -7,24 +7,48 @@ import firebase from 'firebase';
 
 import { Header } from './components/common';
 import LoginForm from './components/LoginForm';
+import Home from './components/Home';
+
+import { firebaseConfig } from '../config';
 
 export default function native() {
   // create a Component
   class App extends Component {
+    state= {
+      appName: '',
+      user: '',
+      loggedIn: null
+    }
     componentWillMount() {
-      firebase.initializeApp({
-        apiKey: 'AIzaSyBtxMY4K6uHxv_2e3GD-FWAD2ACX6lPVRE',
-        authDomain: 'authentication-70a18.firebaseapp.com',
-        databaseURL: 'https://authentication-70a18.firebaseio.com',
-        storageBucket: 'authentication-70a18.appspot.com',
-        messagingSenderId: '682333809338'
+      const app=firebase.initializeApp(firebaseConfig);
+      this.setState({ appName: firebase.app().name });
+
+      firebase.auth().onAuthStateChanged( (user) => {
+        if(user) {
+          this.setState({ loggedIn: true, user})
+        } else {
+          this.setState({ loggedIn: false, user: ''})
+        }
       });
     }
+
+    renderLoggedIn() {
+      if(this.state.user) { 
+        return (
+          <Home user={this.state.user} />
+        );
+      } else {
+        return (
+          <LoginForm />
+        );
+      }
+    }
     render() {
+      console.log('1.App componentWillMount firebaseConfig: ', firebaseConfig);
       return (
         <View style={{ flex: 1 }}>
-          <Header headerText="Authentication" />
-          <LoginForm />
+          <Header headerText="ALEX2006HW" />
+          {this.renderLoggedIn()}
         </View>
       );
     }

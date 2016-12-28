@@ -45,7 +45,9 @@ echo "generated APK can be found under ./android/app/build/outputs/apk/app-relea
 react-native bundle --entry-file ./index.android.js --platform android --bundle-output ./android/main.jsbundle --sourcemap-output ./android/main.jsbundle.map
 
 # run and connect to emulator
-react-native run-android --variant=release
+# https://github.com/facebook/react-native/issues/11586
+#react-native run-android --variant=release
+react-native run-android --configuration=release
 #react-native run-android
 #react-native run-ios
 
