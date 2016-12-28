@@ -5,33 +5,6 @@ import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 
 class Home extends Component {
-    state = { email: '', password: '', loginError: '', loading: false };
-    onButtonPress(){
-        const { email, password } = this.state;
-        this.setState({ loginError: '', loading: true });
-        firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(this.onLoginSuccess.bind(this))
-            .catch( () => {
-                firebase.auth().createUserWithEmailAndPassword(email, password)
-                    .then(this.onLoginSuccess.bind(this))
-                    .catch(this.onLoginError.bind(this))
-            });
-    }
-
-    onLoginError(){
-        this.setState({ 
-            loginError: 'Invalid email or password',
-            loading: false
-        });
-    }
-    onLoginSuccess() {
-        this.setState({
-            email: '',
-            password: '',
-            loading: false,
-            loginError: ''
-        });
-    }
 
     renderButton() {
         if (this.state.loading) {

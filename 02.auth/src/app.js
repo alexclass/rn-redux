@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { AppRegistry, View, Text } from 'react-native';
 import firebase from 'firebase';
 
-import { Header } from './components/common';
+import { Header, Spinner, Button } from './components/common';
 import LoginForm from './components/LoginForm';
 import Home from './components/Home';
 
@@ -43,12 +43,28 @@ export default function native() {
         );
       }
     }
+
+    renderContent() {
+      switch (this.state.loggedIn) {
+        case true:  // was logged in
+          return (
+            <Button onPress= { () => firebase.auth().signOut()} >
+              QUIT
+            </Button>
+          );
+        case false: // not logged in
+          return <LoginForm />;
+        default:  // in limbo
+          return <Spinner size="large" />;
+      }
+    }
+
     render() {
       console.log('1.App componentWillMount firebaseConfig: ', firebaseConfig);
       return (
         <View style={{ flex: 1 }}>
           <Header headerText="ALEX2006HW" />
-          {this.renderLoggedIn()}
+          {this.renderContent()}
         </View>
       );
     }
