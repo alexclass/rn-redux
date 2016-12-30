@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import ReduxThunk from 'redux-thunk';
 import firebase from 'firebase';
 import reducers from './reducers';
 import LoginForm from './components/LoginForm';
 
-const config = require('../config');
+import { firebaseConfig } from '../config';
 
 class App extends Component {
   componentWillMount() {
-    // const db = firebase.initializeApp(config);
-    // console.log('1.App componentWillMount db: ', db);
-    firebase.initializeApp(config);
+    const db = firebase.initializeApp(firebaseConfig);
+    console.log('1.App componentWillMount db: ', db);
+    // firebase.initializeApp(firebaseConfig);
   }
 
   render() {
-    const store = createStore(reducers);
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
     return (
       <Provider store={store}>
