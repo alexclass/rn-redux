@@ -10,8 +10,8 @@ import { firebaseConfig } from '../config';
 
 class App extends Component {
   componentWillMount() {
-    const db = firebase.initializeApp(firebaseConfig);
-    console.log('1.App componentWillMount db: ', db);
+    const FBdb = firebase.initializeApp(firebaseConfig);
+    console.log('1.App componentWillMount FBdb: ', FBdb);
     // firebase.initializeApp(firebaseConfig);
   }
 
