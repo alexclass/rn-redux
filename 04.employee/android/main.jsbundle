@@ -72669,7 +72669,7 @@ var _firebase=require(584 /* firebase */);var _firebase2=babelHelpers.interopReq
 var _reducers=require(589 /* ./reducers */);var _reducers2=babelHelpers.interopRequireDefault(_reducers);
 var _Router=require(594 /* ./Router */);var _Router2=babelHelpers.interopRequireDefault(_Router);
 
-var _config=require(657 /* ../config */);var
+var _config=require(658 /* ../config */);var
 
 App=function(_Component){babelHelpers.inherits(App,_Component);function App(){babelHelpers.classCallCheck(this,App);return babelHelpers.possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).apply(this,arguments));}babelHelpers.createClass(App,[{key:'componentWillMount',value:function componentWillMount()
 {
@@ -75314,7 +75314,7 @@ __d(/* Pointlook/src/Router.js */function(global, require, module, exports) {Obj
 var _reactNativeRouterFlux=require(595 /* react-native-router-flux */);
 var _LoginForm=require(642 /* ./components/LoginForm */);var _LoginForm2=babelHelpers.interopRequireDefault(_LoginForm);
 var _EmployeeList=require(653 /* ./components/EmployeeList */);var _EmployeeList2=babelHelpers.interopRequireDefault(_EmployeeList);
-var _EmployeeCreate=require(655 /* ./components/EmployeeCreate */);var _EmployeeCreate2=babelHelpers.interopRequireDefault(_EmployeeCreate);
+var _EmployeeCreate=require(656 /* ./components/EmployeeCreate */);var _EmployeeCreate2=babelHelpers.interopRequireDefault(_EmployeeCreate);
 
 var RouterComponent=function RouterComponent(){
 return(
@@ -81212,7 +81212,8 @@ var _react=require(433 /* react */);var _react2=babelHelpers.interopRequireDefau
 var _reactRedux=require(554 /* react-redux */);
 var _reactNative=require(12 /* react-native */);
 
-var _actions=require(650 /* ../actions */);var
+var _actions=require(650 /* ../actions */);
+var _EmployeeListItem=require(655 /* ./EmployeeListItem */);var _EmployeeListItem2=babelHelpers.interopRequireDefault(_EmployeeListItem);var
 
 EmployeeList=function(_Component){babelHelpers.inherits(EmployeeList,_Component);function EmployeeList(){babelHelpers.classCallCheck(this,EmployeeList);return babelHelpers.possibleConstructorReturn(this,(EmployeeList.__proto__||Object.getPrototypeOf(EmployeeList)).apply(this,arguments));}babelHelpers.createClass(EmployeeList,[{key:'componentWillMount',value:function componentWillMount()
 {
@@ -81228,20 +81229,18 @@ rowHasChanged:function rowHasChanged(r1,r2){return r1!==r2;}});
 
 
 this.dataSource=ds.cloneWithRows(employees);
-}},{key:'render',value:function render()
+}},{key:'renderRow',value:function renderRow(
 
+employee){
+return _react2.default.createElement(_EmployeeListItem2.default,{employee:employee});
+}},{key:'render',value:function render()
 {
 console.log('1.EmployeeList render props: ',this.props);
 return(
-_react2.default.createElement(_reactNative.View,null,
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList'),
-_react2.default.createElement(_reactNative.Text,null,'EmployeeList')));
+_react2.default.createElement(_reactNative.ListView,{
+enableEmptySections:true,
+dataSource:this.dataSource,
+renderRow:this.renderRow}));
 
 
 }}]);return EmployeeList;}(_react.Component);
@@ -98341,11 +98340,48 @@ root._=_;
 }
 }).call(this);
 }, 654, null, "lodash/lodash.js");
+__d(/* Pointlook/src/components/EmployeeListItem.js */function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(433 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
+var _reactNative=require(12 /* react-native */);
+var _common=require(643 /* ./common */);var
+
+EmployeeListItem=function(_Component){babelHelpers.inherits(EmployeeListItem,_Component);function EmployeeListItem(){babelHelpers.classCallCheck(this,EmployeeListItem);return babelHelpers.possibleConstructorReturn(this,(EmployeeListItem.__proto__||Object.getPrototypeOf(EmployeeListItem)).apply(this,arguments));}babelHelpers.createClass(EmployeeListItem,[{key:'onRowPress',value:function onRowPress()
+
+{
+
+}},{key:'render',value:function render()
+{var
+name=this.props.employee.name;
+
+return(
+_react2.default.createElement(_reactNative.TouchableWithoutFeedback,{onPress:this.onRowPress.bind(this)},
+_react2.default.createElement(_reactNative.View,null,
+
+_react2.default.createElement(_common.CardSection,null,
+_react2.default.createElement(_reactNative.Text,{style:styles.titleStyle},
+name)))));
+
+
+
+
+
+
+
+}}]);return EmployeeListItem;}(_react.Component);
+
+
+var styles={
+titleStyle:{
+fontSize:18,
+paddingLeft:15}};exports.default=
+
+
+EmployeeListItem;
+}, 655, null, "Pointlook/src/components/EmployeeListItem.js");
 __d(/* Pointlook/src/components/EmployeeCreate.js */function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(433 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
 var _reactRedux=require(554 /* react-redux */);
 var _actions=require(650 /* ../actions */);
 var _common=require(643 /* ./common */);
-var _EmployeeForm=require(656 /* ./EmployeeForm */);var _EmployeeForm2=babelHelpers.interopRequireDefault(_EmployeeForm);var
+var _EmployeeForm=require(657 /* ./EmployeeForm */);var _EmployeeForm2=babelHelpers.interopRequireDefault(_EmployeeForm);var
 
 EmployeeCreate=function(_Component){babelHelpers.inherits(EmployeeCreate,_Component);function EmployeeCreate(){babelHelpers.classCallCheck(this,EmployeeCreate);return babelHelpers.possibleConstructorReturn(this,(EmployeeCreate.__proto__||Object.getPrototypeOf(EmployeeCreate)).apply(this,arguments));}babelHelpers.createClass(EmployeeCreate,[{key:'onButtonPress',value:function onButtonPress()
 {var _props=
@@ -98376,7 +98412,7 @@ return{name:name,phone:phone,shift:shift};
 (0,_reactRedux.connect)(mapStateToProps,{
 employeeUpdate:_actions.employeeUpdate,employeeCreate:_actions.employeeCreate})(
 EmployeeCreate);
-}, 655, null, "Pointlook/src/components/EmployeeCreate.js");
+}, 656, null, "Pointlook/src/components/EmployeeCreate.js");
 __d(/* Pointlook/src/components/EmployeeForm.js */function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});var _react=require(433 /* react */);var _react2=babelHelpers.interopRequireDefault(_react);
 var _reactNative=require(12 /* react-native */);
 var _reactRedux=require(554 /* react-redux */);
@@ -98440,7 +98476,7 @@ return{name:name,phone:phone,shift:shift};
 };exports.default=
 
 (0,_reactRedux.connect)(mapStateToProps,{employeeUpdate:_actions.employeeUpdate})(EmployeeForm);
-}, 656, null, "Pointlook/src/components/EmployeeForm.js");
+}, 657, null, "Pointlook/src/components/EmployeeForm.js");
 __d(/* Pointlook/config.js */function(global, require, module, exports) {Object.defineProperty(exports,"__esModule",{value:true});
 var firebaseConfig={
 apiKey:'AIzaSyDWEtH7vNCVFEABPleGAQXzJmaVv_6GF7E',
@@ -98451,7 +98487,7 @@ messagingSenderId:'32087626995'};exports.
 
 
 firebaseConfig=firebaseConfig;
-}, 657, null, "Pointlook/config.js");
+}, 658, null, "Pointlook/config.js");
 ;require(191);
 ;require(0);
 //# sourceMappingURL=main.jsbundle.map

@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import ReduxThunk from 'redux-thunk';
 import firebase from 'firebase';
+import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import Router from './Router';
-
 import { firebaseConfig } from '../config';
 
 class App extends Component {
   componentWillMount() {
-    const FBdb = firebase.initializeApp(firebaseConfig);
-    console.log('1.App componentWillMount FBdb: ', FBdb);
-    // firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
   }
 
   render() {
