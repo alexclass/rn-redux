@@ -1,0 +1,6 @@
+git_url "git+ssh://git@github.com/callmephilip/fastlane-ios-certs.git"
+
+type "appstore"
+
+app_identifier "io.thebakery.todos" 
+username "bakers@thebakery.io"
