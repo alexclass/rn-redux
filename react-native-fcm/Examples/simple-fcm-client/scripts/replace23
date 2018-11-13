@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+#case $OSTYPE in
+#    darwin* ) echo OSX
+#        for DIR in $(ls -d node_modules/react-native-*/android node_modules/gl-react-native*/android); do
+#            mkdir -p tmp/${DIR}
+#            for FILE in ${DIR}/build.gradle; do
+#                awk '{ gsub(/compileSdkVersion.*23/,"compileSdkVersion 25"); print }' ${FILE} > tmp/${FILE}
+#                awk '{ gsub(/^\s*buildToolsVersion.*\"23\.0\.[123]\"/,"buildToolsVersion 25.0.3"); print }' tmp/${FILE} > ${FILE}
+#            done
+#        done
+#        ;;
+#    linux* ) echo linux
+#        grep -rli 'compileSdkVersion 23' * | xargs -i@ sed -i 's/compileSdkVersion 23/compileSdkVersion 25/g' @
+#        grep -rli 'buildToolsVersion "25.0.0"' * | xargs -i@ sed -i 's/buildToolsVersion "25.0.0"/buildToolsVersion "25.0.3"/g' @
+#        grep -rli 'buildToolsVersion "23.0.1"' * | xargs -i@ sed -i 's/buildToolsVersion "23.0.1"/buildToolsVersion "25.0.3"/g' @
+#        grep -rli 'buildToolsVersion "23.0.2"' * | xargs -i@ sed -i 's/buildToolsVersion "23.0.2"/buildToolsVersion "25.0.3"/g' @
+#        grep -rli 'buildToolsVersion "23.0.3"' * | xargs -i@ sed -i 's/buildToolsVersion "23.0.3"/buildToolsVersion "25.0.3"/g' @
+#        grep -rli "buildToolsVersion \'23.0.2\'"* | xargs -i@ sed -i "s/buildToolsVersion \'23.0.2\'/buildToolsVersion \'25.0.3\'/g" @
+#        ;;
+#    * ) echo no-op
+#        ;;
+#esac
+#
+        for DIR in $(ls -d node_modules/react-native-*/android node_modules/gl-react-native*/android node_modules/rn-workers/android node_modules/react-native-code-push/android/app node_modules/react-native-tapjoy/android/app); do
+            mkdir -p tmp/${DIR}
+            for FILE in ${DIR}/build.gradle; do
+                awk '{ gsub(/compileSdkVersion.*23/,"compileSdkVersion 25"); print }' ${FILE} > tmp/${FILE}
+                awk '{ gsub(/buildToolsVersion.*\"2[356]\.0\.[0123]\"/,"buildToolsVersion \"25.0.3\""); print }' tmp/${FILE} > ${FILE}
+            done
+        done

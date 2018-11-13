@@ -1,0 +1,1 @@
+jarsigner -verbose -keystore ~/.gradle/pointlook-release-key.keystore android/app/build/outputs/apk/app-release.apk pointlook-key-alias

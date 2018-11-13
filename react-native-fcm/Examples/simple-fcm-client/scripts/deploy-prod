@@ -1,0 +1,12 @@
+DATE=$(date +%Y%m.%d.%s)
+
+BINARYVERSION=8.1.0
+echo "Deploy date: ${DATE} deploy version: ${BINARYVERSION}"
+
+#code-push release-react Pointlook-android android -m --description android-${BINARYVERSION}-${DATE} -d Production
+code-push release-react Pointlook-ios ios -m --description ios-${BINARYVERSION}-${DATE} -d Production
+#bluemix api https://api.ng.bluemix.net
+#bluemix login -u alex2006hw@gmail.com -o usertoken -s PROD
+#bluemix login -u alex2006hw@gmail.com -o "usertoken" -s "PROD" -sso
+
+#cf push "rn"

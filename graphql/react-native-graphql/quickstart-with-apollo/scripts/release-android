@@ -1,0 +1,8 @@
+\rm -rf /Users/zhome/work/pointlook/ios-android-pointlook/android/app/build/;\rm -rf /var/folders/ww/*
+
+react-native bundle --platform android --dev false --entry-file index.android.js \
+  --bundle-output android/app/src/main/assets/index.android.bundle \
+  --assets-dest android/app/src/main/res
+cd android
+./gradlew assembleRelease
+cd ..;react-native run-android --variant=release

@@ -1,0 +1,41 @@
+{
+  "name": "Pointlook",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start:expo": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "dependencies": {
+    "apollo-client": "^2.0.1",
+    "base-64": "^0.1.0",
+    "expo": "^22.0.0",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "lodash": "^4.17.4",
+    "react": "16.0.0-alpha.12",
+    "react-apollo": "^2.0.0",
+    "react-native": "0.47.1",
+    "react-native-infinite-scroll-view": "^0.4.3",
+    "react-native-prompt": "^1.0.0",
+    "react-navigation": "^1.0.0-beta.15",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.3",
+    "babel-preset-react-native": "2.1.0",
+    "jest": "20.0.4",
+    "jest-expo": "^22.0.1",
+    "react-native-scripts": "^1.5.0",
+    "react-test-renderer": "^16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
+ 

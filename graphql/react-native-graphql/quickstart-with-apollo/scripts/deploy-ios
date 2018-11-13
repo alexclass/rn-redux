@@ -1,0 +1,16 @@
+DATE=$(date +%Y%m.%d.%s)
+
+BINARYVERSION=8.1.0
+echo "Deploy date: ${DATE} deploy version: ${BINARYVERSION}"
+
+#code-push release-react Pointlook-android android -m --description android-${BINARYVERSION}-${DATE} -d Staging
+code-push release-react Pointlook-ios ios -m --description ios-${BINARYVERSION}-${DATE} -d Production
+mkdir -p /var/folders/ww/21tg74w943d8ldpr7dr1_md80000gn/T/CodePush
+
+node node_modules/react-native/local-cli/cli.js bundle --assets-dest /var/folders/ww/21tg74w943d8ldpr7dr1_md80000gn/T/CodePush --bundle-output /var/folders/ww/21tg74w943d8ldpr7dr1_md80000gn/T/CodePush/worker.jsbundle --dev false --entry-file index.worker.js --platform ios
+
+#bluemix api https://api.ng.bluemix.net
+#bluemix login -u alex2006hw@gmail.com -o usertoken -s PROD
+#bluemix login -u alex2006hw@gmail.com -o "usertoken" -s "PROD" -sso
+
+#cf push "rn"

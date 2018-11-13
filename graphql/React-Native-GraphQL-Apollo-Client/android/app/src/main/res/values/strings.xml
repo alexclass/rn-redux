@@ -1,0 +1,4 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">bCE54SjZAsgxxbgxH3uQyeTzSfDdNJKzO6j_b</string>
+    <string name="app_name">Apollo</string>
+</resources>

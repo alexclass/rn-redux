@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "stream": "stream-browserify",
+        "path": "path-webpack"
+      }
+    }],
+    "static-fs"
+  ]
+}

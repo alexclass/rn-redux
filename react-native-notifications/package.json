@@ -1,0 +1,64 @@
+{
+  "name": "react-native-notifications",
+  "version": "1.1.13",
+  "description": "Advanced Push Notifications (Silent, interactive notifications) for iOS & Android",
+  "author": "Lidan Hifi <lidan.hifi@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "react native",
+    "ios",
+    "push-notifications",
+    "push notifications",
+    "notifications",
+    "notification",
+    "react native notifications",
+    "pushkit",
+    "push-kit",
+    "actionable-notifications",
+    "interactive-notifications"
+  ],
+  "nativePackage": true,
+  "dependencies": {
+    "core-js": "^1.0.0",
+    "uuid": "^2.0.3"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.25.1",
+    "react": ">=0.14.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "babel-preset-react-native": "^1.9.0",
+    "babel-register": "^6.7.2",
+    "chai": "^3.5.0",
+    "chokidar-cli": "^1.2.0",
+    "eslint": "^2.12.0",
+    "mocha": "^2.5.3",
+    "proxyquire": "^1.7.4",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "scripts": {
+    "pretest": "./node_modules/.bin/eslint *.js test",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --reporter spec \"test/*.spec.js\"",
+    "start": "npm run test --silent; ./node_modules/.bin/chokidar \"test/*.js\" \"*.js\" -c 'npm run test --silent' --silent"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wix/react-native-notifications.git"
+  },
+  "homepage": "https://github.com/wix/react-native-notifications",
+  "bugs": {
+    "url": "https://github.com/wix/react-native-notifications/issues"
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "324442789010",
+    "project_id": "pointlook-1486221475071"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324442789010:android:ffd9161e270cd5c7",
+        "android_client_info": {
+          "package_name": "com.pointlook.pointlook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0kOXuseuNMoLvcarwOHo81LqznO76s0Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-77388706-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

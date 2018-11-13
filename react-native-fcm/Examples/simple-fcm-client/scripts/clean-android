@@ -1,0 +1,3 @@
+
+\rm -rf /Users/zhome/work/pointlook/ios-android-pointlook/android/app/build/;\rm -rf /var/folders/ww/*
+( cd ./android && ./gradlew uninstallAll && ./gradlew clean )

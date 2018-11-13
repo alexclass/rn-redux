@@ -1,0 +1,9 @@
+#node node_modules/react-native/local-cli/cli.js bundle --dev false --assets-dest ./android/app/src/main/res/ --entry-file index.android.js --platform android --bundle-output ./android/app/src/main/assets/index.android.bundle --sourcemap-output ./sourcemap/android.main.map
+#node node_modules/react-native/local-cli/cli.js bundle --dev false --assets-dest ./android/app/src/main/res/ --entry-file index.worker.js --platform android --bundle-output ./android/app/src/main/assets/index.worker.bundle --sourcemap-output ./sourcemap/android.worker.map
+#
+#node node_modules/react-native/local-cli/cli.js start --port 8081 --reset-cache &
+node node_modules/react-native/local-cli/cli.js start --port 8888 --reset-cache
+#concurrently --kill-others "npm run start-app" "npm run start-worker"
+#adb reverse tcp:8081 tcp:8081 && adb reverse tcp:9000 tcp:9000
+#npm run bundle-app-android && npm run bundle-worker-android
+#concurrently --kill-others "npm run bundle-ios" "run bundle-android\"

@@ -1,0 +1,36 @@
+# 20161021 - how to upload android APP ICON : http://harrymoreno.com/2016/01/21/add-launcher-icon-to-react-native-android-app.html
+
+DATE=$(date +%Y%m.%d.%s)
+PWD=$(pwd)
+MONGO_DB="mongodb://10.101.101.3:27017/native"
+PORT=8081
+SETTINGS="$PWD/settings.json"
+
+echo build-version-$DATE
+echo "Starting all processes owned by $PWD ..."
+
+# install react-native-cli if not there
+RN=$(which react-native)
+[ -z $RN ] && npm install react-native-cli -g
+
+# install node modules if not there
+[ ! -d ./node_modules ] && npm install
+
+[ -f ~/.secrets ] && . ~/.secrets
+#react-native bundle --entry-file ./index.ios.js --platform ios --bundle-output ./ios/main.jsbundle
+[ -f ./android/main.jsbundle ] && \rm ./android/main.jsbundle
+#react-native bundle --entry-file ./index.android.js --platform android --assets-dest android/assets --bundle-output ./android/main.jsbundle --sourcemap-output ./android/main.jsbundle.map
+mkdir -p ./android/app/src/main/assets
+react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/
+
+# run and connect to emulator
+# react-native run-android --variant=release
+#react-native run-android --configuration=release
+#react-native run-android
+#react-native run-ios
+
+# start the developement node server
+#react-native start
+
+# release via codepush
+#code-push release Pointlook ./android $DATE

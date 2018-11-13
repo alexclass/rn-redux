@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77DF1C5B1D62F06200E8B909 /* CWStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF1C581D62F06200E8B909 /* CWStatusBarNotification.m */; };
+		77DF1C5C1D62F06200E8B909 /* JitPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF1C591D62F06200E8B909 /* JitPush.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		773FCA0B1D59DD07007BBED3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		773FCA0D1D59DD07007BBED3 /* libJitPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJitPush.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DF1C571D62F06200E8B909 /* CWStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWStatusBarNotification.h; path = JitPush/CWStatusBarNotification.h; sourceTree = SOURCE_ROOT; };
+		77DF1C581D62F06200E8B909 /* CWStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWStatusBarNotification.m; path = JitPush/CWStatusBarNotification.m; sourceTree = SOURCE_ROOT; };
+		77DF1C591D62F06200E8B909 /* JitPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JitPush.m; path = JitPush/JitPush.m; sourceTree = SOURCE_ROOT; };
+		77DF1C5A1D62F06200E8B909 /* JitPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JitPush.h; path = JitPush/JitPush.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		773FCA0A1D59DD07007BBED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		773FCA041D59DD07007BBED3 = {
+			isa = PBXGroup;
+			children = (
+				773FCA0F1D59DD07007BBED3 /* JitPush */,
+				773FCA0E1D59DD07007BBED3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		773FCA0E1D59DD07007BBED3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				773FCA0D1D59DD07007BBED3 /* libJitPush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		773FCA0F1D59DD07007BBED3 /* JitPush */ = {
+			isa = PBXGroup;
+			children = (
+				77DF1C571D62F06200E8B909 /* CWStatusBarNotification.h */,
+				77DF1C581D62F06200E8B909 /* CWStatusBarNotification.m */,
+				77DF1C591D62F06200E8B909 /* JitPush.m */,
+				77DF1C5A1D62F06200E8B909 /* JitPush.h */,
+			);
+			name = JitPush;
+			path = JittaOnFly;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		773FCA0C1D59DD07007BBED3 /* JitPush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 773FCA161D59DD07007BBED3 /* Build configuration list for PBXNativeTarget "JitPush" */;
+			buildPhases = (
+				773FCA091D59DD07007BBED3 /* Sources */,
+				773FCA0A1D59DD07007BBED3 /* Frameworks */,
+				773FCA0B1D59DD07007BBED3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JitPush;
+			productName = JittaOnFly;
+			productReference = 773FCA0D1D59DD07007BBED3 /* libJitPush.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		773FCA051D59DD07007BBED3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Jitta.com;
+				TargetAttributes = {
+					773FCA0C1D59DD07007BBED3 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 773FCA081D59DD07007BBED3 /* Build configuration list for PBXProject "JitPush" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 773FCA041D59DD07007BBED3;
+			productRefGroup = 773FCA0E1D59DD07007BBED3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				773FCA0C1D59DD07007BBED3 /* JitPush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		773FCA091D59DD07007BBED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF1C5B1D62F06200E8B909 /* CWStatusBarNotification.m in Sources */,
+				77DF1C5C1D62F06200E8B909 /* JitPush.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		773FCA141D59DD07007BBED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		773FCA151D59DD07007BBED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		773FCA171D59DD07007BBED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = JitPush;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		773FCA181D59DD07007BBED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = JitPush;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		773FCA081D59DD07007BBED3 /* Build configuration list for PBXProject "JitPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773FCA141D59DD07007BBED3 /* Debug */,
+				773FCA151D59DD07007BBED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		773FCA161D59DD07007BBED3 /* Build configuration list for PBXNativeTarget "JitPush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				773FCA171D59DD07007BBED3 /* Debug */,
+				773FCA181D59DD07007BBED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 773FCA051D59DD07007BBED3 /* Project object */;
+}

@@ -1,0 +1,2 @@
+react-native bundle --platform ios --dev false --entry-file index.worker.js --bundle-output ./ios/worker.jsbundle
+react-native bundle --platform android --dev false --entry-file index.worker.js --bundle-output ./android/worker.jsbundle

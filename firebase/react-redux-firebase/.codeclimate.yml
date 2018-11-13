@@ -1,0 +1,11 @@
+languages:
+  JavaScript: true
+
+exclude_paths:
+- "lib/**"
+- "test/**"
+- "examples/**"
+- "LICENSE"
+- "LICENSE.md"
+- "README.md"
+- "package.json"

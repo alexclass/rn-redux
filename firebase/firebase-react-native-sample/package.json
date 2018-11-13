@@ -1,0 +1,13 @@
+{
+  "name": "firebase-react-native-sample",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "start": "react-native start"
+  },
+  "dependencies": {
+    "firebase": "^3.1.0",
+    "react": "15.2.1",
+    "react-native": "^0.29.0"
+  }
+}

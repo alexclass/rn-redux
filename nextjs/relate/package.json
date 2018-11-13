@@ -1,0 +1,115 @@
+{
+  "name": "relate",
+  "version": "0.0.16",
+  "author": "Sebastien Dubois",
+  "license": "GPL-3.0",
+  "main": "./server",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "scripts": {
+    "postinstall": "sh scripts/createDefaultConfig.sh",
+    "dev": "nodemon -w server -w universal -w yarn.lock -w next.config.js -w config.js -w package.json",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production node server",
+    "lint-staged": "lint-staged",
+    "deploy": "eslint . && now && now alias",
+    "bundle:analyze": "ANALYZE_BUNDLE=true yarn dev",
+    "bundle:view": "webpack-bundle-analyzer .next/stats.json"
+  },
+  "dependencies": {
+    "accept-language": "^3.0.15",
+    "auth0-lock": "^10.13.0",
+    "babel-plugin-transform-define": "^1.2.0",
+    "babel-preset-env": "^1.2.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "graphql-anywhere": "^3.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jest-cli": "^19.0.2",
+    "lru-cache": "^4.0.2",
+    "next": "3.0.0-beta3",
+    "next-routes": "^1.0.20",
+    "nprogress": "^0.2.0",
+    "react": "^15.4.2",
+    "react-apollo": "1.0.0-rc.3",
+    "react-dom": "^15.4.2",
+    "react-ga": "^2.1.2",
+    "react-intl": "^2.2.3",
+    "react-no-ssr": "^1.1.0",
+    "react-player": "^0.14.3",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "session-file-store": "^1.0.0",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "lint-staged": "^3.4.0",
+    "node-fetch": "^1.6.3",
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.1.3",
+    "webpack-bundle-analyzer": "^2.3.1"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ],
+          "next/babel"
+        ]
+      }
+    },
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "transform-define",
+        "./config.js"
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "globals": {
+      "document": true,
+      "window": true,
+      "process": true,
+      "fetch": false,
+      "ANALYTICS_TRACKING_ID": false,
+      "AUTH0_CLIENT_ID": false,
+      "AUTH0_DOMAIN": false,
+      "GRAPHQL_ENDPOINT": false,
+      "NEWSLETTER_FORM_ACTION": false,
+      "NEWSLETTER_FORM_INPUT_NAME": false
+    },
+    "rules": {
+      "react/forbid-prop-types": 0,
+      "react/jsx-filename-extension": 0,
+      "react/react-in-jsx-scope": 0
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "now": {
+    "alias": "relate"
+  },
+  "pre-commit": "lint-staged"
+}

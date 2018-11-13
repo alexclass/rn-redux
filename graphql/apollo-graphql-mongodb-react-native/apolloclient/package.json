@@ -1,0 +1,26 @@
+{
+  "name": "apolloclient",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh",
+    "test": "jest"
+  },
+  "dependencies": {
+    "apollo-client": "^0.4.22",
+    "graphql-tag": "^0.1.15",
+    "react": "15.3.2",
+    "react-apollo": "^0.5.13",
+    "react-native": "^0.35.0"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  },
+  "devDependencies": {
+    "babel-jest": "16.0.0",
+    "babel-preset-react-native": "1.9.0",
+    "jest": "16.0.2",
+    "jest-react-native": "16.0.0",
+    "react-test-renderer": "15.3.2"
+  }
+}

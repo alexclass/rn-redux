@@ -1,0 +1,17 @@
+type Tweet {
+    id: ID! @isUnique
+    text: String!
+    author: User! @relation(name: "Tweets")
+}
+
+type User {
+    id: ID! @isUnique
+    name: String!
+    tweets: [Tweet!]! @relation(name: "Tweets")
+}
+
+type Post {
+    id: ID! @isUnique
+    description: String!
+    imageUrl: String!
+}

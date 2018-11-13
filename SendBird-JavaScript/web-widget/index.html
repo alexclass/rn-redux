@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <link rel='shortcut icon' href='https://s3.amazonaws.com/sendbird-static/favicon/favicon.ico' type='image/x-icon'>
+  <title>Widget Sample</title>
+
+  <style>
+    body { margin: 0; background: #E9EBEE; }
+  </style>
+
+</head>
+<body>
+
+  <div style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    color: #485874;
+    font-size: 14px;
+    ">Ver.0.13.0</div>
+  <div style="
+    margin: 0 auto;
+    width: 1100px;
+    height: 1752px;
+    background-image: url('https://dxstmhyqfqr1o.cloudfront.net/widget/bg_mockup.png');
+    background-size: 1100px 1752px;
+    background-repeat: no-repeat;
+    "></div>
+
+  <div id="sb_widget"></div>
+
+</body>
+
+<script src="SendBird.min.js"></script>
+<script src="build/widget.SendBird.js"></script>
+<script>
+  sbWidget.start('9DA1B1F4-0BE6-4DA8-82C5-2E81DAB56F23');
+</script>
+
+</html>

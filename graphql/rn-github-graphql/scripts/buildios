@@ -1,0 +1,38 @@
+DATE=$(date +%Y%m.%d.%s)
+PWD=$(pwd)
+MONGO_DB="mongodb://10.101.101.3:27017/native"
+PORT=8081
+SETTINGS="$PWD/settings.json"
+
+echo build-version-$DATE
+echo "Starting all processes owned by $PWD ..."
+
+# install react-native-cli if not there
+RN=$(which react-native)
+[ -z $RN ] && npm install react-native-cli -g
+
+# install node modules if not there
+[ ! -d ./node_modules ] && npm install
+
+# create a settings.json file at project root then use this to start meteor (meteor installed at $HOME/.meteor/)
+# MONGO_URL=$MONGO_DB $HOME/.meteor/meteor --production --settings $SETTINGS --port $PORT
+
+# build a bundle for production 'release' mode
+#react-native bundle --dev false --platform ios --assets-dest ./ios --entry-file ./index.ios.js --bundle-output ./ios/main.jsbundle &
+#react-native bundle --entry-file ./index.ios.js --platform ios --assets-dest ./ios --bundle-output ./ios/main.jsbundle
+#react-native bundle --entry-file ./index.android.js --platform android --assets-dest ./android --bundle-output ./android/main.jsbundle
+
+# need to be added to build run scripts
+#( export NODE_BINARY=node;cd ios;./react-native-workers.sh;../node_modules/react-native/packager/react-native-xcode.sh )
+
+[ -f ./ios/main.jsbundle ] && \rm ./ios/main.jsbundle*
+#[ -f ./ios/worker.jsbundle ] && \rm ./ios/worker.jsbundle*
+[ ! -d ./sourcemap ] && mkdir ./sourcemap
+react-native bundle --dev false --platform ios --assets-dest ./ios --entry-file ./index.ios.js --bundle-output ./ios/main.jsbundle   --sourcemap-output ./sourcemap/main.jsbundle.map 
+#react-native bundle --dev false --platform ios --assets-dest ./ios --entry-file ./index.worker.js --bundle-output ./ios/worker.jsbundle   --sourcemap-output ./sourcemap/worker.jsbundle.map
+
+# run and connect to emulator
+# react-native run-ios --simulator="iPhone 4s"
+
+# release via codepush
+#code-push release Pointlook ./ios $DATE

@@ -1,0 +1,7 @@
+example/
+test/
+RNNotifications/DerivedData
+node_modules/
+
+.eslintrc
+*.yml

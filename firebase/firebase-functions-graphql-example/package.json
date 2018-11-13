@@ -1,0 +1,43 @@
+{
+  "name": "firebase-functions-graphql-example",
+  "version": "2.0.0",
+  "description": "GraphQL server running on Cloud Functions for Firebase",
+  "homepage":
+    "https://github.com/jthegedus/firebase-functions-graphql-example#readme",
+  "bugs": {
+    "url":
+      "https://github.com/jthegedus/firebase-functions-graphql-example/issues"
+  },
+  "license": "MIT",
+  "author": "James Hegedus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jthegedus/firebase-functions-graphql-example.git"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "predeploy": "yarn package:functions",
+    "deploy": "firebase deploy",
+    "format":
+      "prettier --write \"firebaseFunctions/**/*{.js, .json}\" && sort-package-json",
+    "postinstall": "cd firebaseFunctions && yarn",
+    "prepackage:functions": "rimraf \"dist/functions\"",
+    "package:functions":
+      "babel \"firebaseFunctions\" --out-dir \"dist/functions\" --copy-files --ignore \"node_modules\"",
+    "postpackage:functions": "cd \"dist/functions\" && yarn",
+    "preserve": "yarn package:functions",
+    "serve": "firebase serve --only functions"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.1",
+    "prettier": "^1.7.0",
+    "rimraf": "^2.6.2",
+    "sort-package-json": "^1.7.1"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
+  }
+}

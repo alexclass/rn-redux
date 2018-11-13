@@ -1,0 +1,39 @@
+{
+  "name": "EpubReader",
+  "version": "0.0.1",
+  "description": "Demo of Epubjs React Native components",
+  "repository": "https://github.com/futurepress/epubjs-rn",
+  "main": "components/index.js",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "clean": "watchman watch-del-all",
+    "reset": "npm run clean && node node_modules/react-native/local-cli/cli.js start -- --resetCache"
+  },
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "epubjs": "^0.3.34",
+    "epubjs-rn": "0.0.70",
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.44.3",
+    "react-native-fetch-blob": "^0.10.5",
+    "react-native-fs": "^2.3.2",
+    "react-native-orientation": "8fit/react-native-orientation",
+    "react-native-static-server": "0.1.7",
+    "react-native-vector-icons": "^4.2.0",
+    "react-native-visible-scrollview": "0.0.6",
+    "react-native-wkwebview-reborn": "fchasen/react-native-wkwebview",
+    "react-native-zip-archive": "1.1.1"
+  },
+  "devDependencies": {
+    "babel-jest": "20.0.3",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-preset-react-native": "1.9.2",
+    "jest": "20.0.3",
+    "jest-react-native": "18.0.0",
+    "react-test-renderer": "~15.5.4"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  }
+}

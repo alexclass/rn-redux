@@ -1,0 +1,4 @@
+#npm i -g yo generator-rn-toolbox
+#brew update;brew install imagemagick
+yo rn-toolbox:assets --icon assets/images/pl-logo.png
+

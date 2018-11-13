@@ -1,0 +1,31 @@
+{
+  "name": "jitpush",
+  "version": "1.0.0",
+  "description": "Push your code updated on fly without AppStore Review Proceed. // React native modules",
+  "main": "JitPush.js",
+  "files": [
+    "JitPush.js",
+    "JitPush-iOS/JitPush.xcodeproj",
+    "JitPush-iOS/JitPush/JitPush.h",
+    "JitPush-iOS/JitPush/JitPush.m",
+    "JitPush-iOS/JitPush/CWStatusBarNotification.h",
+    "JitPush-iOS/JitPush/CWStatusBarNotification.m"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/Thunderbird7/JitPush.git"
+  },
+  "author": "Yuttana Kungwon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thunderbird7/JitPush/issues"
+  },
+  "homepage": "https://github.com/Thunderbird7/JitPush#readme",
+  "keywords": [
+    "react-native",
+    "updates"
+  ]
+}

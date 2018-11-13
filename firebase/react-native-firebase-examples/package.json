@@ -1,0 +1,46 @@
+{
+  "name": "ReactNativeFirebaseExamples",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android:dev": "react-native run-android",
+    "android:prod": "react-native run-android --configuration=release",
+    "ios:dev": "react-native run-ios",
+    "ios:prod": "react-native run-ios --configuration=release",
+    "ios:pod:install": "cd ios && rm -rf ReactNativeFirebaseExamples.xcworkspace && pod install && cd ..",
+    "test": "jest"
+  },
+  "dependencies": {
+    "moment": "^2.17.1",
+    "react": "~15.4.1",
+    "react-native": "0.42.0",
+    "react-native-firebase": "git+https://github.com/invertase/react-native-firebase.git",
+    "react-native-vector-icons": "^4.0.0",
+    "react-navigation": "^1.0.0-beta.7",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.2",
+    "redux-persist": "^4.4.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "19.0.0",
+    "babel-plugin-flow-react-proptypes": "^0.21.0",
+    "babel-plugin-root-import": "^5.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "jest": "19.0.2",
+    "react-test-renderer": "~15.4.1",
+    "redux-immutable-state-invariant": "^1.2.4"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

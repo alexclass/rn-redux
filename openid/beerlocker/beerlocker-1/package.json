@@ -1,0 +1,7 @@
+{
+  "name": "beerlocker",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

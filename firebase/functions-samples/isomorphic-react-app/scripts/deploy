@@ -1,0 +1,3 @@
+( cd functions;yarn install)
+( cd src;yarn install;npm run build )
+firebase deploy

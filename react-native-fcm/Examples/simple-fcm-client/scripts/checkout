@@ -1,0 +1,2 @@
+[ ! -d ../pointlook-javascript ] && mkdir -p ../pointlook-javascript
+rsync -axW {app,assets,config,debug,*.js,scripts,www} ../pointlook-javascript/
